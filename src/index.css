@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Language-aware font switching ── */
+html.lang-hi,
+html.lang-hi * {
+  font-family: 'Noto Sans Devanagari', sans-serif !important;
+}
+
+html.lang-en,
+html.lang-en * {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ── Saarthi design tokens ── */
+:root {
+  --green-dark:   #1B4332;
+  --green-mid:    #2D6A4F;
+  --green-light:  #D8F3DC;
+  --green-surface:#F0FBF3;
+  --gold:         #D4A017;
+  --gold-light:   #FEF3C7;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--green-surface); }
+::-webkit-scrollbar-thumb { background: var(--green-mid); border-radius: 3px; }
+
+/* ── Smooth transitions ── */
+* { transition-property: color, background-color, border-color;
+    transition-duration: 150ms; transition-timing-function: ease; }
+
+/* ── Toast override ── */
+.Toastify__toast { font-family: inherit; border-radius: 12px; }
