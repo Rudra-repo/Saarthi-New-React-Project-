@@ -4,6 +4,10 @@
 
 ---
 
+> 📖 **Project Scope & Architecture Info**: Please see the [**Detailed Product Requirements Document (PRD)**](./PRD.md) for an in-depth breakdown of user personas, algorithms, offline-resilience strategies, and features.
+
+---
+
 ## 🌟 Key Features
 
 * **🤖 AI-Powered Discovery**: Users simply type their situation in natural language (e.g., "I am a widow" or "नौकरी छूट गई"). The integrated Gemini/Groq AI engine categorizes the distress signal and instantly dynamically hooks up relevant schemes and live local job opportunities.
