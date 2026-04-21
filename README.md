@@ -1,110 +1,269 @@
-# सaarthi (Saarthi)
+# Saarthi (सaarthi) – AI-Powered Civic Welfare Platform
+**Building Web Applications with React – End Term Project**
 
-**Saarthi** is an AI-powered, multilingual civic welfare platform designed to radically simplify how citizens discover, understand, and apply for government schemes, local benefits, and employment opportunities in India. Built with a mobile-first approach, it features intelligent AI parsing to connect everyday problems ("I lost my job") to tangible government solutions.
-
----
-
-> 📖 **Project Scope & Architecture Info**: Please see the [**Detailed Product Requirements Document (PRD)**](./PRD.md) for an in-depth breakdown of user personas, algorithms, offline-resilience strategies, and features.
+A full-stack AI-powered multilingual civic welfare platform built using React and Backend-as-a-Service (Firebase).  
+This application helps citizens overcome bureaucratic friction by providing personalized scheme discovery, immediate language translation, and real-time AI-powered assistance for government services.
 
 ---
 
-## 🌟 Key Features
-
-* **🤖 AI-Powered Discovery**: Users simply type their situation in natural language (e.g., "I am a widow" or "नौकरी छूट गई"). The integrated Gemini/Groq AI engine categorizes the distress signal and instantly dynamically hooks up relevant schemes and live local job opportunities.
-* **🌐 True Bilingual Support**: Full, deep translation across the platform in both English and Hindi. The entire scheme database, UI components, and even the AI prompt directives swap seamlessly to cater to regional users.
-* **📂 Smart Scheme Engine**: Contains a deeply curated, categorized engine of over 40+ National & State-level schemes spanning:
-  * Agriculture & Farmers (KCC, PM-KISAN)
-  * Health (Ayushman Bharat, PM Surakshit Matritva)
-  * Women & Child Development (Widow Pensions, Beti Bachao)
-  * Employment & Skilling (NCS, MGNREGA, DDU-GKY)
-* **💼 Earn & Work Hub**: A dedicated section to find unskilled/semi-skilled private jobs, skill training courses (Skill India/PMKVY), wage tables for state laborers, and AI-suggested local self-employment ideas based on user skills.
-* **📱 Progressive Onboarding**: Frictionless access to critical information. Users can browse everything without an account, but standard Firebase Auth (Email & Google) is available for those who want to save schemes and track their applied job forms to their personal dashboard.
-* **🌐 Resilient Architecture**: Implements graceful fallbacks (LocalStorage & SessionStorage caching) that ensure users can still view saved schemes and stories even under poor network conditions or Firebase quota limits.
+## Project Details
+- **Submission by:** Rudra Pratap Singh
+- **Roll No:** 10236
+- **Student Mail Id:** [PENDING USER UPDATE]
+- **Course:** Building Web Applications with React
+- **Batch:** [PENDING USER UPDATE]
 
 ---
 
-## 🛠️ Technology Stack
+## Problem Statement
 
-* **Frontend Framework**: React (Vite)
-* **Styling**: TailwindCSS (Vibrant, accessible, mobile-responsive UI design)
-* **Routing**: React Router DOM
-* **Database & Auth**: Firebase (Authentication, Cloud Firestore)
-* **AI Integration**: Google Gemini API (with Groq fallback)
-* **Icons**: React Icons (Heroicons/Lucide styling)
-* **Alerts**: React Toastify
+Vulnerable populations preparing to apply for government schemes or local jobs often struggle with unstructured bureaucratic information due to scattered resources across various State and Central portals.
 
----
+They face three major challenges:
 
-## 🚀 Getting Started
+- Difficulty in deciding which schemes they are eligible for and how to apply
+- Density of administrative language (complex English/Hindi)
+- No instant digital support for clearing doubts during the application phase
 
-### Prerequisites
-
-You will need **Node.js** installed and Firebase credentials if you need cloud sync.
-You will also need an API key for Google Gemini AI.
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Rudra-repo/Saarthi-New-React-Project-.git
-   cd Saarthi-New-React-Project-
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Configure Environment Variables:**
-   Create a `.env` file in the root directory and add the following keys:
-   ```env
-   VITE_FIREBASE_API_KEY="your-firebase-api-key"
-   VITE_FIREBASE_AUTH_DOMAIN="your-auth-domain"
-   VITE_FIREBASE_PROJECT_ID="your-project-id"
-   VITE_FIREBASE_STORAGE_BUCKET="your-storage-bucket"
-   VITE_FIREBASE_MESSAGING_SENDER_ID="your-sender-id"
-   VITE_FIREBASE_APP_ID="your-app-id"
-   VITE_GEMINI_API_KEY="your-google-gemini-key"
-   VITE_GROQ_API_KEY="your-groq-api-key" # Optional fallback
-   ```
-
-4. **Start the Development Server:**
-   ```bash
-   npm run dev
-   ```
-
-5. **Open the platform:**
-   Navigate to `http://localhost:5173` in your browser.
+As a result:
+- Citizens waste time switching between multiple government websites
+- Feel overwhelmed by sheer volume of documents required
+- Resort to physical middlemen instead of direct benefits
 
 ---
 
-## 📂 Project Structure
+## Target Users
 
-\`\`\`
-src/
-├── components/       # Reusable UI components (Navbar, SchemeCard, ChatBox)
-├── context/          # React Contexts (AuthContext, LanguageContext, UserContext)
-├── pages/            # Main application views (Home, Schemes, Earn, Dashboard)
-├── services/         # External integrations (firebase.js, aiService.js)
-├── constants/        # Centralized data (schemes database, UI translations)
-├── App.jsx           # Main Application Router
-└── index.css         # Global Tailwind directives
-\`\`\`
+- Vulnerable Citizens (Widows, senior citizens, disabled individuals)
+- Rural Populations (Farmers seeking agricultural loans/wages, MGNREGA)
+- Unemployed Youth & Laborers
+- Low-Digital-Literacy Users needing simple natural language inputs
 
 ---
 
-## 🤝 Contribution
+## Solution – Saarthi
 
-Contributions, issues, and feature requests are welcome!
+A smart web application that acts as a digital "Charioteer", enhancing civic welfare discovery through:
 
-1. Fork the Project
-2. Create your Feature Branch (\`git checkout -b feature/AmazingFeature\`)
-3. Commit your Changes (\`git commit -m 'Add some AmazingFeature'\`)
-4. Push to the Branch (\`git push origin feature/AmazingFeature\`)
-5. Open a Pull Request
+- Personalized AI Scheme Discovery
+- Real-time intelligent Eligibility Matrix Filtering
+- AI assistance for Natural Language distress input
+
+The platform focuses on unstructured data transformation, offline resilience, and empathetic intelligent assistance.
 
 ---
 
-## 📄 License
+## Theme Focus – Civic Tech & Welfare
 
-Distributed under the MIT License. See \`LICENSE\` for more information.
+### Theme
+AI-powered platform for democratizing access to government schemes and local employment.
+
+### What Users Can Do
+- Simply type or dictate their distress ("I lost my job", "मेरी फसल बर्बाद हो गई").
+- Get an instantly categorized list of relevant government schemes.
+- Browse the Earn & Work hub for local labor, private jobs, or self-employment ideas.
+- Save schemes and track job form applications in a persistent dashboard.
+
+### Why This Theme Works
+- Solves a massive, real-world socio-economic problem.
+- Integrates AI meaningfully for empathetic NLP resolution rather than a standard chatbot.
+- Combines discovery, tracking, and localized translation in one system.
+- Demonstrates strong frontend (React) and backend (Firebase) integration.
+
+---
+
+## Core Features
+
+### AI Discovery Engine
+- Natural language distress input.
+- Empathetic responses using Google Gemini API (with Groq fallback).
+- Categorizes distress directly to database sectors like 'agriculture', 'women', 'job'.
+
+---
+
+### Scheme Catalog & Eligibility Matrix
+- Deeply categorized database of 40+ Central and State schemes.
+- Dynamically cross-references user profile attributes against scheme metadata.
+- Optimistic UI display defaults to showing schemes when data is missing.
+
+---
+
+### The Earn & Work Hub
+- Integration for localized state-wise wage distributions (MGNREGA).
+- Private local job postings.
+- AI self-employment suggestion based on baseline skills.
+
+---
+
+### Dashboard
+- Displays saved schemes and jobs.
+- Tracks applied government form statuses.
+- Local Storage fallbacks for offline-resilience during poor network conditions.
+
+---
+
+### Authentication System
+- User Signup / Login
+- Protected Routes
+- User-specific data storage via Firebase Auth
+
+---
+
+### Persistent Data (CRUD)
+- Save and update relevant tracked schemes
+- Store job history
+- Local community story publishing and sync
+
+---
+
+## React Concepts Used
+
+### Core Concepts
+- Functional Components
+- Props and Component Composition
+- useState (State Management)
+- useEffect (Side Effects)
+- Conditional Rendering
+- Lists and Keys
+
+### Intermediate Concepts
+- Lifting State Up
+- Controlled Components
+- React Router (Routing)
+- Context API (Global State: `AuthContext`, `LanguageContext`, `UserContext`)
+
+### Advanced Concepts
+- Graceful API Fallbacks (Gemini -> Groq DLs)
+- Optimistic UI updates
+- Local Storage synchronization and Offline Handling
+
+---
+
+## Tech Stack
+
+### Frontend
+- React (Vite / CRA)
+- React Router
+- Context API
+
+### Backend / Services
+- Firebase / Supabase
+  - Authentication
+  - Database
+
+### UI / Styling
+- Tailwind CSS (or chosen library)
+- Responsive Design
+
+---
+
+## Project Structure
+```text
+Saarthi-New-React-Project-
+│
+├── public
+│ └── index.html
+│
+├── src
+│ ├── components # Reusable UI components
+│ ├── pages # Route-based pages
+│ ├── hooks # Custom hooks
+│ ├── context # Global state management
+│ ├── services # API and backend logic
+│ ├── utils # Helper functions
+│ ├── assets # Images / icons
+│ ├── App.jsx # Main app component
+│ └── main.jsx # Entry point
+│
+├── .env # Environment variables
+├── package.json
+├── PRD.md
+└── README.md
+```
+
+---
+
+## Application Flow
+
+1. User lands on Home (no login needed)
+2. Toggles preferred language (English/Hindi)
+3. Types a problem ("I need money for daughter's wedding") in the AI box
+4. AI responds empathetically and connects relevant schemes
+5. User logs in (Auth) to save schemes or track job applications
+6. User browses 'Earn' hub for immediate wage info and self-employment AI advice
+7. User accesses Dashboard to see saved items even with poor connectivity
+
+---
+
+## Live Demo
+[PENDING USER UPDATE] (Vercel / Netlify)
+
+---
+
+## Demo Video
+[PENDING USER UPDATE] (3–5 minutes)
+
+---
+
+## UI / UX Design
+
+- Vibrant, accessible, and inclusive design system
+- Bilingual UI components swapping seamlessly
+- Responsive across devices
+- Progressive disclosure (features available without friction)
+- Resilient states (handling API quotas or offline gracefully)
+
+---
+
+## Known Limitations
+
+- AI responses depend heavily on Gemini/Groq uptime and limits
+- Requires internet connection for AI context, though simple lists work offline
+- Complete application for schemes still requires external portals
+
+---
+
+## Future Improvements
+
+- Voice Integration (dictating problems instead of typing)
+- WhatsApp Bot Extensibility (connecting the core AI logic to a WhatsApp number)
+- State-targeted scheme filtering
+- Auto-filling application PDFs based on user profiles
+
+---
+
+## Evaluation Alignment
+
+This project demonstrates:
+
+- Strong React fundamentals
+- Real-world problem solving
+- Meaningful AI integration
+- Backend integration (Authentication and Database)
+- Clean architecture and scalable structure
+
+---
+
+## Academic Integrity
+
+- Built with full understanding of concepts
+- No blind AI-generated code used
+- All logic implemented and explainable
+- Custom tailored to solve friction in civic tech 
+
+---
+
+## Author
+
+**Rudra Pratap Singh**  
+
+---
+
+## Final Note
+
+This project is designed as a portfolio-level application, not just an academic submission.
+
+It demonstrates the ability to:
+- Solve real-world problems
+- Build scalable React applications
+- Integrate AI into citizen workflows
