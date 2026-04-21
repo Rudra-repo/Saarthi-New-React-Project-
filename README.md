@@ -195,13 +195,8 @@ Saarthi-New-React-Project-
 
 ---
 
-## Live Demo
-[PENDING USER UPDATE] (Vercel / Netlify)
-
----
-
 ## Demo Video
-[PENDING USER UPDATE] (3–5 minutes)
+https://drive.google.com/file/d/1MJLy4IP2g8NYjp9bQ0bsT1cTU2aDZlUK/view?usp=drive_link
 
 ---
 
