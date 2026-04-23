@@ -27,32 +27,34 @@ const OrganizerDashboard = lazy(() => import('./pages/OrganizerDashboard'))
 
 function AppRoutes() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen w-full overflow-x-hidden bg-surface relative">
       <Navbar />
-      <Suspense fallback={<LoadingSpinner fullPage />}>
-        <Routes>
-          <Route path="/"                element={<Home />} />
-          <Route path="/schemes"         element={<Schemes />} />
-          <Route path="/schemes/:id"     element={<SchemeDetail />} />
-          <Route path="/earn"            element={<Earn />} />
-          <Route path="/loans"           element={<Loans />} />
-          <Route path="/local"           element={<LocalResources />} />
-          <Route path="/community"       element={<Community />} />
-          <Route path="/awareness"       element={<Awareness />} />
-          <Route path="/login"           element={<Login />} />
+      <main className="flex-1 w-full flex flex-col">
+        <Suspense fallback={<LoadingSpinner fullPage />}>
+          <Routes>
+            <Route path="/"                element={<Home />} />
+            <Route path="/schemes"         element={<Schemes />} />
+            <Route path="/schemes/:id"     element={<SchemeDetail />} />
+            <Route path="/earn"            element={<Earn />} />
+            <Route path="/loans"           element={<Loans />} />
+            <Route path="/local"           element={<LocalResources />} />
+            <Route path="/community"       element={<Community />} />
+            <Route path="/awareness"       element={<Awareness />} />
+            <Route path="/login"           element={<Login />} />
 
-          {/* Protected routes — require login */}
-          <Route path="/dashboard" element={
-            <ProtectedRoute><Dashboard /></ProtectedRoute>
-          } />
-          
-          <Route path="/management" element={
-            <ProtectedRoute allowedRoles={['organizer']}>
-              <OrganizerDashboard />
-            </ProtectedRoute>
-          } />
-        </Routes>
-      </Suspense>
+            {/* Protected routes — require login */}
+            <Route path="/dashboard" element={
+              <ProtectedRoute><Dashboard /></ProtectedRoute>
+            } />
+            
+            <Route path="/management" element={
+              <ProtectedRoute allowedRoles={['organizer']}>
+                <OrganizerDashboard />
+              </ProtectedRoute>
+            } />
+          </Routes>
+        </Suspense>
+      </main>
 
       <ToastContainer
         position="bottom-right"
@@ -63,8 +65,9 @@ function AppRoutes() {
         pauseOnFocusLoss={false}
         pauseOnHover
         theme="light"
+        toastClassName="mx-2 mb-2 md:m-0 rounded-xl font-inherit"
       />
-    </>
+    </div>
   )
 }
 

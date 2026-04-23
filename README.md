@@ -8,11 +8,10 @@ This application helps citizens overcome bureaucratic friction by providing pers
 
 ## Project Details
 - **Submission by:** Rudra Pratap Singh
-- **Roll No:** 10236
-- **Student Mail Id:** [PENDING USER UPDATE]
+- **Roll No:** 25bcs10236
+- **Student Mail Id:** rudra.25bcs10236@sst.scaler.com
 - **Course:** Building Web Applications with React
-- **Batch:** [PENDING USER UPDATE]
-
+- **Batch:** 2025-2029
 ---
 
 ## Problem Statement
@@ -196,8 +195,7 @@ Saarthi-New-React-Project-
 ---
 
 ## Demo Video
-https://drive.google.com/file/d/1MJLy4IP2g8NYjp9bQ0bsT1cTU2aDZlUK/view?usp=drive_link
-
+https://drive.google.com/file/d/1MJLy4IP2g8NYjp9bQ0bsT1cTU2aDZlUK/view?usp=sharing
 ---
 
 ## UI / UX Design
